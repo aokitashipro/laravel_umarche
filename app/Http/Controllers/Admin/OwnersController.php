@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Owner; // Eloquent エロクアント
+use Illuminate\Support\Facades\DB; // QueryBuilder クエリビルダ
 
 class OwnersController extends Controller
 {
@@ -12,14 +14,18 @@ class OwnersController extends Controller
         $this->middleware('auth:admin');
     } 
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        dd('オーナー一覧です');
+        $e_all = Owner::all();
+        $q_get = DB::table('owners')->select('name')->get();
+        $q_first = DB::table('owners')->select('name')->first();
+
+        $c_test = collect([
+            'name' => 'てすと'
+        ]);
+
+
+        dd($e_all, $q_get, $q_first, $c_test);
     }
 
     /**
