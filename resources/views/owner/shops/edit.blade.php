@@ -40,8 +40,8 @@
                       </div>
                       <div class="p-2 w-1/2 mx-auto">
                         <div class="relative flex justify-around">
-                          <div><input type="radio" name="is_selling" value="1" class="mr-2"  @if($shop->is_selling = true){ checked } @endif>販売中</div>
-                          <div><input type="radio" name="is_selling" value="0" class="mr-2"  @if($shop->is_selling = false){ checked } @endif>停止中</div>
+                          <div><input type="radio" name="is_selling" value="1" class="mr-2" @if($shop->is_selling == true){ checked } @endif>販売中</div>
+                          <div><input type="radio" name="is_selling" value="0" class="mr-2" @if($shop->is_selling == false){ checked } @endif>停止中</div>
                         </div>
                       </div>
                           <div class="p-2 w-full flex justify-around mt-4">
