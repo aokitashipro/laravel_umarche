@@ -32,6 +32,7 @@ class ProductController extends Controller
 
     public function index()
     {
+        // EagerLoadingなし
         //$products = Owner::findOrFail(Auth::id())->shop->product;
         
         $ownerInfo = Owner::with('shop.product.imageFirst')
