@@ -175,7 +175,8 @@ class ProductController extends Controller
                         $product->image3 = $request->image3;
                         $product->image4 = $request->image4;
                         $product->is_selling = $request->is_selling;
-    
+                        $product->save();
+
                     if($request->type === \Constant::PRODUCT_LIST['add']){
                         $newQuantity = $request->quantity;
                     }
