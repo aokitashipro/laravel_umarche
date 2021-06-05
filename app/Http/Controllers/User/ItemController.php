@@ -29,7 +29,7 @@ class ItemController extends Controller
         ->join('images as image4', 'products.image4', '=', 'image4.id')
         ->where('shops.is_selling', true)
         ->where('products.is_selling', true)
-        ->select('products.id', 'products.name as name', 'products.price'
+        ->select('products.id as id', 'products.name as name', 'products.price'
         ,'products.sort_order as sort_order'
         ,'products.information', 'secondary_categories.name as category'
         ,'image1.filename as filename')
