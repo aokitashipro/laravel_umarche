@@ -68,11 +68,10 @@
                       <div class="flex items-center">
                         <span class="mr-3">数量</span>
                           <div class="relative">
-                            <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
-                              <option>SM</option>
-                              <option>M</option>
-                              <option>L</option>
-                              <option>XL</option>
+                            <select name="quantity" class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                              @for ($i = 1; $i <= $quantity; $i++)
+                              <option value="{{$i}}">{{$i}}</option>  
+                              @endfor
                             </select>
                           </div>
                       </div>
