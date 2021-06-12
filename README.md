@@ -2,10 +2,12 @@
 
 ## ダウンロード方法
 
-git clone 
+git clone
+
 git clone https://github.com/aokitashipro/laravel_umarche.git
 
 git clone ブランチを指定してダウンロードする場合
+
 git clone -b ブランチ名 https://github.com/aokitashipro/laravel_umarche.git
 
 もしくはzipファイルでダウンロードしてください
