@@ -1,8 +1,9 @@
-# Udemy Laravel講座「マルチログイン機能を構築し本格的なECサイトをつくってみよう【Breeze/tailwindcss】」
+# Udemy Laravel講座「マルチログイン機能を構築し本格的なECサイトをつくってみよう【Breeze/tailwindcss】」のバグ修正の場所です
 
 https://www.udemy.com/share/104J4k3@IMep40V66vX5HuXpdptkO5bpqHw07p5Cldci2D_3-B52HmHzrBrfjCs-4FmHZeBx/
 
 この講座でLaravelの開発ができるようになったので、勝手にバグフィックスなどのフォローします！
+本サイトはあくまで講座で使われているGithubサイトからフォークしたものです。
 フォロー専用ブランチ名には全てbugfix_という接頭辞を付けています。
 
 ------------
