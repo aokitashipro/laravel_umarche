@@ -24,7 +24,10 @@ class CartController extends Controller
             $totalPrice += $product->price * $product->pivot->quantity;
         }
 
-        // dd($products, $totalPrice);
+        $items = Cart::where('user_id', Auth::id())->get();
+        $productsInCart = CartService::getItemsInCart($items);
+
+        dd($products, $items, $productsInCart);
 
         return view('user.cart', 
             compact('products', 'totalPrice'));

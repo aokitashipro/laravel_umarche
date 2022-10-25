@@ -13,11 +13,12 @@ class CartService
     foreach($items as $item)
     {
         $p = Product::findOrFail($item->product_id);
-        $owner = $p->shop->owner->select('name', 'email')->first()->toArray(); 
-        $values = array_values($owner);
-        $keys = ['ownerName', 'email'];
-        $ownerInfo = array_combine($keys, $values);
-        
+        $owner = $p->shop->owner;
+        $ownerInfo = [
+          'ownerName' => $owner->name,
+          'email' => $owner->email
+        ];
+
         $product = Product::where('id', $item->product_id)
         ->select('id', 'name', 'price')->get()->toArray();
   
