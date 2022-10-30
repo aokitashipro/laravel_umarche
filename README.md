@@ -15,7 +15,7 @@ git clone -b ブランチ名 https://github.com/aokitashipro/laravel_umarche.git
 ## インストール方法
 
 - cd laravel_umarche
-- composer install
+- composer install または composer update
 - npm install
 - npm run dev
 
