@@ -81,3 +81,4 @@ storage/app/public/shopsフォルダを作成し
 ワーカーを立ち上げて動作確認するようにしてください。
 (講座内で解説しています)
 
+# demo-multiple-login
