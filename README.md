@@ -82,3 +82,4 @@ storage/app/public/shopsフォルダを作成し
 (講座内で解説しています)
 
 # demo-multiple-login
+# demo-multiple-login

@@ -47,4 +47,15 @@ class User extends Authenticatable
         return $this->belongsToMany(Product::class, 'carts')
         ->withPivot(['id', 'quantity']); 
     }
+
+    public function isAdmin()
+    {
+        // Check if the user exists in the admins table
+        return $this->admin()->exists();
+    }
+
+    public function admin()
+    {
+        return $this->hasOne(Admin::class);
+    }
 }
