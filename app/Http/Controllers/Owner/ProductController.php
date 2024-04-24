@@ -153,7 +153,7 @@ class ProductController extends Controller
         $quantity = Stock::where('product_id', $product->id)
         ->sum('quantity');
 
-        if($request->current_quantity !== $quantity){
+        if($request->current_quantity !== strval($quantity)){
             $id = $request->route()->parameter('product');
             return redirect()->route('owner.products.edit', [ 'product' => $id])
             ->with(['message' => '在庫数が変更されています。再度確認してください。',
